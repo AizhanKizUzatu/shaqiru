@@ -1,29 +1,23 @@
-// 🎵 Музыка при загрузке
-const music = document.getElementById("wedding-music");
-music.volume = 0.2;
-document.addEventListener("click", () => {
-  if (music.paused) music.play();
-}, { once: true });
-
-// 🕓 Обратный отсчёт
+// Таймер
 function updateCountdown() {
   const weddingDate = new Date('2025-11-28T00:00:00+05:00');
   const now = new Date();
   const diff = weddingDate - now;
-  const el = document.getElementById('countdown');
-  if (!el) return;
+
+  const countdownEl = document.getElementById('countdown');
+  if (!countdownEl) return;
 
   if (diff <= 0) {
-    el.innerText = "Той басталды! 🎉";
+    countdownEl.innerText = "Той басталды! 🎉";
     return;
   }
 
-  const d = Math.floor(diff / (1000*60*60*24));
-  const h = Math.floor((diff / (1000*60*60)) % 24);
-  const m = Math.floor((diff / (1000*60)) % 60);
+  const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const m = Math.floor((diff / (1000 * 60)) % 60);
   const s = Math.floor((diff / 1000) % 60);
 
-  el.innerHTML = `
+  countdownEl.innerHTML = `
     <div class="time-box">${d}<span>күн</span></div>
     <div class="time-box">${h}<span>сағ</span></div>
     <div class="time-box">${m}<span>мин</span></div>
@@ -33,21 +27,32 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
-// 📤 Отправка RSVP формы в Google Sheets
-document.getElementById('rsvp-form').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const name = document.getElementById('name').value;
-  const attendance = document.querySelector('input[name="attendance"]:checked').value;
+// Опрос (отправка в Google Sheets)
+function sendRSVP(attendance) {
+  const name = document.getElementById("name").value.trim();
+  if (!name) {
+    alert("Аты-жөніңізді енгізіңіз!");
+    return;
+  }
 
-  const response = await fetch('https://script.google.com/macros/s/AKfycbxTD0xwkE8hbU2XjtzzzlNg9upzMcjcxucd23twtb7nsHoAhwjrSIGeCHJrIztKUZO5/exec', {
-    method: 'POST',
-    body: new URLSearchParams({ name, attendance })
+  fetch("YOUR_GOOGLE_SCRIPT_URL", {
+    method: "POST",
+    mode: "no-cors",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: `name=${encodeURIComponent(name)}&attendance=${encodeURIComponent(attendance)}`
   });
 
-  if (response.ok) {
-    document.getElementById('rsvp-message').innerText = `${name}, сіздің жауабыңыз сақталды 💛`;
-    e.target.reset();
+  alert("Жауабыңыз үшін рахмет!");
+  document.getElementById("rsvp-form").reset();
+}
+
+// Переключение языка (заглушка)
+function setLang(lang) {
+  if (lang === 'ru') {
+    document.getElementById('title').innerText = 'Свадьба Айжан';
+    document.getElementById('invite-text').innerText = 'Дорогие гости! Приглашаем вас разделить нашу радость 💛';
   } else {
-    document.getElementById('rsvp-message').innerText = "Қате пайда болды 😔";
+    document.getElementById('title').innerText = 'Айжанның Ұзатуы';
+    document.getElementById('invite-text').innerText = 'Құрметті қонақтар! Сіздерді қуанышымызбен бөлісуге шақырамыз 💛';
   }
-});
+}
