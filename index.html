@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Айжанның ұзатуы – 28 қараша</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Айжанның ұзатуы</h1>
+    <p>Құрметті қонақтар! Сіздерді қуанышымызбен бөлісуге шақырамыз 💛</p>
+  </header>
+
+  <div class="page">
+    <h2>Мекен жайымыз</h2>
+    <p><strong>Aktau Palace</strong></p>
+    <a href="https://2gis.kz/aktau/geo/9430214933025176" target="_blank">
+      <img src="2gis.png" alt="2GIS карта" class="map-icon">
+    </a>
+  </div>
+
+  <div class="page calendar">
+    <h2>Қараша 2025</h2>
+    <table>
+      <tr>
+        <th>Дс</th><th>Сс</th><th>Ср</th><th>Бс</th><th>Жм</th><th>Сб</th><th>Жс</th>
+      </tr>
+      <tr><td></td><td></td><td></td><td></td><td></td><td>1</td><td>2</td></tr>
+      <tr><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
+      <tr><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td></tr>
+      <tr><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td></tr>
+      <tr><td>24</td><td>25</td><td>26</td><td>27</td><td><span class="highlight">28</span></td><td>29</td><td>30</td></tr>
+    </table>
+  </div>
+
+  <div class="page schedule">
+    <h2>Мерекелік бағдарлама</h2>
+    <ul>
+      <li>Қонақтарды қарсы алу</li>
+      <li>Салтанатты ашылу</li>
+      <li>Бата беру</li>
+      <li>Алғашқы би</li>
+      <li>Құттықтаулар</li>
+      <li>Ойындар мен концерт</li>
+    </ul>
+  </div>
+
+  <div class="page countdown-section">
+    <h2>Тойға дейін</h2>
+    <div id="countdown"></div>
+  </div>
+
+  <div class="page rsvp">
+    <h2>RSVP – Қатысуыңызды растаңыз</h2>
+    <form id="rsvp-form">
+      <input type="text" id="name" placeholder="Атыңыз және тегі" required>
+      <label><input type="radio" name="attendance" value="Келемін" required> Келемін</label>
+      <label><input type="radio" name="attendance" value="Келе алмаймын"> Келе алмаймын</label>
+      <button type="submit">Жіберу</button>
+    </form>
+    <p id="rsvp-message"></p>
+  </div>
+
+  <audio id="wedding-music" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <footer>
+    Айжанның ұзатуы • 28 қараша 2025
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
