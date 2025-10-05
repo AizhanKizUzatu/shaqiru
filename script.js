@@ -35,7 +35,7 @@ function sendRSVP(attendance) {
     return;
   }
 
-  fetch("YOUR_GOOGLE_SCRIPT_URL", {
+  fetch("https://script.google.com/macros/s/AKfycbymR8vXztyWVqvjsfbuEHW00bFp7VqedODVu1MXwBoeR8UdkVkFzp_ce_CJWNT5E-SP/exec", {
     method: "POST",
     mode: "no-cors",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
