@@ -1,167 +1,262 @@
 <!DOCTYPE html>
 <html lang="kk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Қыз ұзату – Айжан</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Айжанының - Қыз ұзатуға шақыру</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Фон и музыка -->
-  <audio id="bg-music" autoplay loop>
-    <source src="music.mp3" type="audio/mpeg">
-  </audio>
+    <!-- Аудио контрол -->
+    <div class="audio-control" id="audioControl">
+        <i class="fas fa-play"></i>
+    </div>
 
-  <script>
-    const music = document.getElementById("bg-music");
-    music.volume = 0.3;
-    document.addEventListener("click", () => {
-      if (music.paused) music.play();
-    }, { once: true });
-  </script>
+    <!-- Навигационные точки -->
+    <div class="nav-dots">
+        <div class="dot active" data-section="0"></div>
+        <div class="dot" data-section="1"></div>
+        <div class="dot" data-section="2"></div>
+        <div class="dot" data-section="3"></div>
+        <div class="dot" data-section="4"></div>
+    </div>
 
-  <div class="container">
-    <section class="invitation">
-      <h1>Құрметті қонақтар!</h1>
-      <p>
-        Ағайын-туыс, бауырлар, нағашы-жиен, құда-жекжат, дос-жаран, құрдастар, көршілер, ұжымдастар!<br><br>
-        Сіздерді аяулы қызымыз<br>
-        <span class="highlight">Айжан</span><br>
-        ыстық ұясынан құтты босағасына ұзату тойына арналған<br>
-        ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!
-      </p>
+    <!-- Секция 1: Главная -->
+    <section class="parallax-section" id="section1">
+        <div class="parallax-bg bg-1"></div>
+        <div class="bg-overlay"></div>
+        
+        <!-- Декоративные элементы -->
+        <div class="floral-decoration" style="top: 10%; left: 10%;">❦</div>
+        <div class="floral-decoration" style="top: 15%; right: 15%;">✻</div>
+        <div class="floral-decoration" style="bottom: 20%; left: 20%;">❁</div>
+        
+        <div class="content">
+            <h1>Айжанының - Қыз ұзатуға шақыру</h1>
+            <div class="divider"></div>
+            <p style="font-size: 1.6rem; font-style: italic;">Қыз ұзату. Ағайын-туыс, бауырлар, нағашы-жиен, құда-жекжат, дос-жаран, құрдастар, көршілер, ұжымдастар!</p>
+            
+            <div style="max-width: 800px; margin: 30px auto;">
+                <p style="font-size: 1.4rem; line-height: 1.8; font-style: italic; color: #ffb6c1;">
+                    Сіздерді аяулы қызымыз<br>
+                    Айжан<br><br>
+                    ыстық ұясынан құтты босағасына ұзату тойына арналған ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!
+                </p>
+            </div>
+            
+            <div class="date-box">
+                <h3>28 Қараша 2025</h3>
+                <p style="font-size: 1.3rem; margin-top: 10px;">Сәтті сағат 17:00</p>
+            </div>
+
+            <!-- Календарь Ноября 2025 -->
+            <div class="calendar-container">
+                <div class="calendar-header">Қараша 2025</div>
+                <div class="calendar">
+                    <div class="calendar-weekday">Дс</div>
+                    <div class="calendar-weekday">Сс</div>
+                    <div class="calendar-weekday">Ср</div>
+                    <div class="calendar-weekday">Бс</div>
+                    <div class="calendar-weekday">Жм</div>
+                    <div class="calendar-weekday">Сб</div>
+                    <div class="calendar-weekday">Жс</div>
+                    
+                    <!-- Ноябрь 2025 начинается с субботы -->
+                    <div class="calendar-day empty"></div>
+                    <div class="calendar-day empty"></div>
+                    <div class="calendar-day empty"></div>
+                    <div class="calendar-day empty"></div>
+                    <div class="calendar-day empty"></div>
+                    <div class="calendar-day empty"></div>
+                    <div class="calendar-day">1</div>
+                    <div class="calendar-day">2</div>
+                    <div class="calendar-day">3</div>
+                    <div class="calendar-day">4</div>
+                    <div class="calendar-day">5</div>
+                    <div class="calendar-day">6</div>
+                    <div class="calendar-day">7</div>
+                    <div class="calendar-day">8</div>
+                    <div class="calendar-day">9</div>
+                    <div class="calendar-day">10</div>
+                    <div class="calendar-day">11</div>
+                    <div class="calendar-day">12</div>
+                    <div class="calendar-day">13</div>
+                    <div class="calendar-day">14</div>
+                    <div class="calendar-day">15</div>
+                    <div class="calendar-day">16</div>
+                    <div class="calendar-day">17</div>
+                    <div class="calendar-day">18</div>
+                    <div class="calendar-day">19</div>
+                    <div class="calendar-day">20</div>
+                    <div class="calendar-day">21</div>
+                    <div class="calendar-day">22</div>
+                    <div class="calendar-day">23</div>
+                    <div class="calendar-day">24</div>
+                    <div class="calendar-day">25</div>
+                    <div class="calendar-day">26</div>
+                    <div class="calendar-day">27</div>
+                    <div class="calendar-day event">28</div>
+                    <div class="calendar-day">29</div>
+                    <div class="calendar-day">30</div>
+                </div>
+            </div>
+        </div>
     </section>
 
-<section class="venue">
-  <h2>Мекен жайымыз</h2>
-  <p><strong>Aktau Palace</strong></p>
-  <a href="https://2gis.kz/aktau/firm/70000001030696537" target="_blank">
-    <img src="2gi.png" alt="2ГИС" class="map-icon gold-border">
-  </a>
-</section>
-
-
-   <section class="calendar-section">
-  <h2>Күнтізбе</h2>
-  <h3 class="event-date">Өткізу күні: 28 қараша</h3>
-  <div class="calendar">
-    <table>
-      <thead>
-        <tr>
-          <th>Дс</th>
-          <th>Сс</th>
-          <th>Ср</th>
-          <th>Бс</th>
-          <th>Жм</th>
-          <th>Сб</th>
-          <th>Жс</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td>
-        </tr>
-        <tr>
-          <td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
-        </tr>
-        <tr>
-          <td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td>
-        </tr>
-        <tr>
-          <td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td>
-        </tr>
-        <tr>
-          <td>25</td><td>26</td><td>27</td>
-          <td class="highlight">28</td>
-          <td>29</td><td>30</td><td></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-
-    <section class="schedule">
-      <h2>Мерекелік бағдарлама</h2>
-      <ul>
-        <li>Қонақтарды қарсы алу</li>
-        <li>Салтанатты рәсім</li>
-        <li>Бата және тілек</li>
-        <li>Айжанның алғашқы биі</li>
-        <li>Қызықты ойындар мен сыйлықтар</li>
-        <li>Түнгі көңілді би бағдарламасы</li>
-      </ul>
+    <!-- Секция 2: Место проведения -->
+    <section class="parallax-section" id="section2">
+        <div class="parallax-bg bg-2"></div>
+        <div class="bg-overlay"></div>
+        <div class="content">
+            <h2>Орналасқан жері</h2>
+            <div class="location-info">
+                <h3>Aktau Palace</h3>
+                <p>Ақтау қаласы, Орталық алаң</p>
+                <div style="margin-top: 25px;">
+                    <p style="font-size: 1.2rem; font-style: italic;">
+                        <i class="fas fa-star pink-text"></i> Орталықда орналасқан<br>
+                        <i class="fas fa-car pink-text"></i> Тегін паркинг<br>
+                        <i class="fas fa-utensils pink-text"></i> Дәстүрлі тағамдар
+                    </p>
+                </div>
+                <a href="https://2gis.kz/aktau/firm/70000001030696537" class="location-link" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> 2GIS картада көру
+                </a>
+            </div>
+            
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Күн</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Сағат</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Минут</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Секунд</span>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="countdown-section">
-      <h2>Тойға дейін қалған уақыт</h2>
-      <div id="countdown"></div>
+    <!-- Секция 3: Программа -->
+    <section class="parallax-section" id="section3">
+        <div class="parallax-bg bg-3"></div>
+        <div class="bg-overlay"></div>
+        <div class="content">
+            <h2>Той бағдарламасы</h2>
+            
+            <div class="program-item">
+                <strong style="color: #d87093; font-size: 1.3rem;">Қонақтарды қабылдау</strong>
+                <p>Шампанский және жеңіл тағамдар</p>
+            </div>
+            
+            <div class="program-item">
+                <strong style="color: #d87093; font-size: 1.3rem;">Неке рәсімі</strong>
+                <p>Дәстүрлі салтанатты рәсім</p>
+            </div>
+            
+            <div class="program-item">
+                <strong style="color: #d87093; font-size: 1.3rem;">Ас ішу</strong>
+                <p>Ерекше дайындалған той баптары</p>
+            </div>
+            
+            <div class="program-item">
+                <strong style="color: #d87093; font-size: 1.3rem;">Той кеші</strong>
+                <p>Ән-би, ойын-сауық бағдарламасы</p>
+            </div>
+        </div>
     </section>
 
-<form id="guestForm">
-  <label for="name">Аты-жөніңіз:</label><br>
-  <input type="text" id="name" name="name" placeholder="Атыңызды жазыңыз" required><br><br>
+    <!-- Секция 4: Дресс-код -->
+    <section class="parallax-section" id="section4">
+        <div class="parallax-bg bg-4"></div>
+        <div class="bg-overlay"></div>
+        <div class="content">
+            <h2>Dress-Code</h2>
+            
+            <div class="dress-code-image-container">
+                <div class="dress-code-image-wrapper">
+                    <img src="dress-code.png" alt="Дресс-код" class="dress-code-image">
+                    <div class="dress-code-label left">Әйелдерге кешкі көйлек</div>
+                    <div class="dress-code-label right">Ерлерге костюм</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Секция 5: Форма подтверждения -->
+    <section class="parallax-section" id="section5">
+        <div class="parallax-bg bg-5"></div>
+        <div class="bg-overlay"></div>
+        <div class="content">
+            <h2>Қатысуынызды растаңыз</h2>
+            
+            <div class="form-container">
+                <form id="attendanceForm">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Аты-жөніңіз</label>
+                        <input type="text" id="name" name="name" class="form-input" required placeholder="Толық аты-жөніңізді енгізіңіз">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Қатысасыз ба?</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="radio" name="attendance" value="Иә, қатысамын" class="checkbox-input" required>
+                                <span>Иә, қатысамын</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="radio" name="attendance" value="Жоқ, қатыспаймын" class="checkbox-input" required>
+                                <span>Жоқ, қатыспаймын</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Жіберу
+                    </button>
+                </form>
+                
+                <div id="message" class="message"></div>
+            </div>
+        </div>
+    </section>
 
-  <label>Қатысуыңыз:</label><br>
-  <label><input type="radio" name="attendance" value="Келемін" required> Келемін </label>
-  <label><input type="radio" name="attendance" value="Келе алмаймын"> Келе алмаймын </label><br><br>
+    <!-- Фон и музыка -->
+    <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
 
-  <button type="submit">Жіберу</button>
-</form>
-
-<p id="formMessage" style="text-align:center; color:goldenrod;"></p>
-
-<script>
-document.getElementById("guestForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  const form = e.target;
-  const formData = new FormData(form);
-
-  fetch("https://script.google.com/macros/s/AKfycbymR8vXztyWVqvjsfbuEHW00bFp7VqedODVu1MXwBoeR8UdkVkFzp_ce_CJWNT5E-SP/exec", {
-    method: "POST",
-    body: formData,
-    mode: "no-cors" // добавлено, чтобы Google принял запрос без CORS-ошибки
-  })
-  .then(() => {
-    document.getElementById("formMessage").textContent = "Жауабыңыз сақталды!";
-    form.reset();
-  })
-  .catch(() => {
-    document.getElementById("formMessage").textContent = "Қате пайда болды.";
-  });
-});
-</script>
-
-<script>
-  function updateCountdown() {
-    const weddingDate = new Date('2025-11-28T00:00:00+05:00'); // дата события
-    const now = new Date();
-    const diff = weddingDate - now;
-
-    const countdownEl = document.getElementById('countdown');
-    if (!countdownEl) return; // если элемента нет, не выполняем
-
-    if (diff <= 0) {
-      countdownEl.innerText = "Той басталды! 🎉";
-      return;
-    }
-
-    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const m = Math.floor((diff / (1000 * 60)) % 60);
-    const s = Math.floor((diff / 1000) % 60);
-
-    countdownEl.innerHTML = `
-      <div class="time-box">${d}<span>күн</span></div>
-      <div class="time-box">${h}<span>сағ</span></div>
-      <div class="time-box">${m}<span>мин</span></div>
-      <div class="time-box">${s}<span>сек</span></div>
-    `;
-  }
-
-  // вызываем сразу и обновляем каждую секунду
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-</script>
+    <script src="script.js"></script>
+    
+    <script>
+        // Простой скрипт для музыки
+        const music = document.getElementById("bg-music");
+        if (music) {
+            music.volume = 0.3;
+            
+            // Пытаемся запустить музыку
+            music.play().catch(error => {
+                console.log('Автозапуск музыки заблокирован');
+            });
+            
+            // Запускаем при клике
+            document.addEventListener("click", () => {
+                if (music.paused) {
+                    music.play().catch(error => {
+                        console.log('Не удалось запустить музыку');
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>
