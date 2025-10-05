@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  background: #fffaf0 url('1.jpg') center/cover fixed no-repeat;
+  color: #3a2e2a;
+}
+
+header {
+  text-align: center;
+  padding: 70px 20px 40px;
+  background: rgba(58,46,42,0.85);
+  color: #f5e2a9;
+  border-bottom: 6px solid #d4af37;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 72px;
+  color: #ffd700;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+}
+
+.page {
+  max-width: 900px;
+  margin: 40px auto;
+  background: rgba(255,255,255,0.9);
+  border: 10px double #d4af37;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 0 25px rgba(212,175,55,0.3);
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 42px;
+  color: #b7950b;
+  margin-bottom: 20px;
+}
+
+.calendar table {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  border-collapse: collapse;
+}
+
+.calendar th, .calendar td {
+  padding: 12px;
+  border: 1px solid #d4af37;
+}
+
+.highlight {
+  background: #d4af37;
+  color: #fff;
+  border-radius: 50%;
+  padding: 8px 14px;
+}
+
+.schedule ul {
+  list-style: none;
+  padding: 0;
+}
+
+.schedule li {
+  padding: 12px;
+  margin: 8px 0;
+  border-left: 6px solid #d4af37;
+  background: #fffef5;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.countdown-section #countdown {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.time-box {
+  background: #fff8dc;
+  border: 3px solid #d4af37;
+  border-radius: 15px;
+  padding: 15px 20px;
+  font-size: 24px;
+  color: #8b6c2c;
+  font-weight: bold;
+  text-align: center;
+}
+
+.time-box span {
+  display: block;
+  font-size: 14px;
+  color: #5a4633;
+}
+
+.map-icon {
+  width: 100px;
+  display: block;
+  margin: 10px auto;
+  transition: transform 0.3s;
+}
+
+.map-icon:hover {
+  transform: scale(1.1);
+}
+
+form {
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+label {
+  display: block;
+  margin: 10px;
+  font-size: 20px;
+  color: #5a4633;
+}
+
+button {
+  background: #d4af37;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #b08c2b;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(58,46,42,0.9);
+  color: #f5e2a9;
+  font-size: 18px;
+  margin-top: 40px;
+}
