@@ -338,23 +338,34 @@ p {
     right: 20px;
 }
 
-/* Стили для изображения слева */
-.bride-image-left {
+/* Стили для изображения с анимацией */
+.bride-image-top {
     position: absolute;
-    left: 5%;
-    bottom: 10%;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1;
     pointer-events: none;
 }
 
-.bride-image-left .bride-image {
-    max-width: 400px;
-    max-height: 70vh;
+.bride-image-top .bride-image {
+    max-width: 280px;
+    max-height: 40vh;
     width: auto;
     height: auto;
     object-fit: contain;
-    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.2));
-    opacity: 0.85;
+    filter: drop-shadow(0 8px 25px rgba(0, 0, 0, 0.2));
+    opacity: 0.9;
+    animation: gentleFloat 4s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 /* Форма */
