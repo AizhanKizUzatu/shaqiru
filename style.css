@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Playfair Display', serif;
-    color: #5a4a4a;
+    color: #FFD700;
     overflow-x: hidden;
     background: #fff5f5;
     font-weight: 400;
@@ -69,23 +69,26 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
     font-weight: 500;
     font-style: italic;
-    color: #5a4a4a;
+    color: #FFD700;
     line-height: 1.4;
 }
 
 h1 {
     font-size: 3rem;
     margin-bottom: 25px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
 
 h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
 
 h3 {
     font-size: 2rem;
     margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
 
 /* Основной текст */
@@ -93,9 +96,10 @@ p {
     font-family: 'Playfair Display', serif;
     font-size: 1.3rem;
     line-height: 1.7;
-    color: #5a4a4a;
+    color: #FFD700;
     font-weight: 400;
     margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
 
 /* Особые акценты */
@@ -158,8 +162,9 @@ strong, b {
     font-size: 3rem !important;
     font-weight: 600;
     font-style: italic;
-    color: #8B4513;
+    color: #FFD700;
     margin: 20px 0;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
 
 .date-box {
@@ -228,9 +233,9 @@ strong, b {
 
 .program-caption strong {
     font-size: 1.3rem;
-    color: #d87093;
+    color: #FFD700;
     font-family: 'Playfair Display', serif;
-    text-shadow: 0 0 10px rgba(216, 112, 147, 0.2);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
 
 .countdown {
@@ -244,7 +249,7 @@ strong, b {
     background: linear-gradient(135deg, rgba(216, 112, 147, 0.2) 0%, rgba(255, 182, 193, 0.1) 100%);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(216, 112, 147, 0.3);
-    color: #d87093;
+    color: #FFD700;
     padding: 30px 25px;
     border-radius: 15px;
     min-width: 120px;
@@ -263,7 +268,7 @@ strong, b {
     font-size: 1.1rem;
     opacity: 0.9;
     letter-spacing: 1px;
-    color: #5a4a4a;
+    color: #FFD700;
 }
 
 .location-info {
@@ -277,9 +282,9 @@ strong, b {
 }
 
 .location-link {
-    color: #d87093;
+    color: #FFD700;
     text-decoration: none;
-    border-bottom: 1px solid #d87093;
+    border-bottom: 1px solid #FFD700;
     transition: all 0.3s ease;
     display: inline-block;
     margin-top: 15px;
@@ -306,7 +311,7 @@ strong, b {
 .calendar-header {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
-    color: #d87093;
+    color: #FFD700;
     margin-bottom: 30px;
     text-shadow: 0 0 10px rgba(216, 112, 147, 0.3);
 }
@@ -321,7 +326,7 @@ strong, b {
 .calendar-weekday {
     padding: 15px;
     text-align: center;
-    color: #d87093;
+    color: #FFD700;
     font-weight: bold;
     font-size: 1.1rem;
     border-bottom: 1px solid rgba(216, 112, 147, 0.3);
@@ -335,7 +340,7 @@ strong, b {
     font-size: 1.2rem;
     transition: all 0.3s ease;
     border: 1px solid transparent;
-    color: #5a4a4a;
+    color: #FFD700;
 }
 
 .calendar-day:hover {
@@ -344,7 +349,7 @@ strong, b {
 }
 
 .calendar-day.event {
-    background: linear-gradient(135deg, #d87093, #ffb6c1);
+    background: linear-gradient(135deg, #FFD700, #ffb6c1);
     color: white;
     font-weight: bold;
     box-shadow: 0 0 20px rgba(216, 112, 147, 0.4);
@@ -425,7 +430,7 @@ strong, b {
 .form-label {
     display: block;
     margin-bottom: 10px;
-    color: #d87093;
+    color: #FFD700;
     font-size: 1.2rem;
     font-weight: 500;
 }
@@ -436,7 +441,7 @@ strong, b {
     background: rgba(255, 255, 255, 0.7);
     border: 1px solid rgba(216, 112, 147, 0.3);
     border-radius: 10px;
-    color: #5a4a4a;
+    color: #FFD700;
     font-size: 1.1rem;
     font-family: 'Playfair Display', serif;
     transition: all 0.3s ease;
@@ -444,7 +449,7 @@ strong, b {
 
 .form-input:focus {
     outline: none;
-    border-color: #d87093;
+    border-color: #FFD700;
     box-shadow: 0 0 10px rgba(216, 112, 147, 0.3);
     background: white;
 }
@@ -461,17 +466,17 @@ strong, b {
     gap: 10px;
     cursor: pointer;
     font-size: 1.1rem;
-    color: #5a4a4a;
+    color: #FFD700;
 }
 
 .checkbox-input {
     width: 20px;
     height: 20px;
-    accent-color: #d87093;
+    accent-color: #FFD700;
 }
 
 .submit-btn {
-    background: linear-gradient(135deg, #d87093, #ffb6c1);
+    background: linear-gradient(135deg, #FFD700, #ffb6c1);
     color: white;
     border: none;
     padding: 15px 40px;
@@ -496,7 +501,7 @@ strong, b {
 .divider {
     width: 100px;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #d87093, transparent);
+    background: linear-gradient(90deg, transparent, #FFD700, transparent);
     margin: 30px auto;
 }
 
@@ -521,7 +526,7 @@ strong, b {
 }
 
 .dot.active {
-    background: #d87093;
+    background: #FFD700;
     transform: scale(1.4);
     box-shadow: 0 0 15px rgba(216, 112, 147, 0.6);
 }
@@ -578,7 +583,7 @@ strong, b {
 }
 
 .audio-control i {
-    color: #d87093;
+    color: #FFD700;
     font-size: 1.2rem;
 }
 
