@@ -338,6 +338,25 @@ p {
     right: 20px;
 }
 
+/* Стили для изображения слева */
+.bride-image-left {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.bride-image-left .bride-image {
+    max-width: 400px;
+    max-height: 70vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.2));
+    opacity: 0.85;
+}
+
 /* Форма */
 .form-container {
     background: linear-gradient(135deg, rgba(216, 112, 147, 0.15) 0%, rgba(255, 182, 193, 0.1) 100%);
