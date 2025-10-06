@@ -1,4 +1,3 @@
-/* style.css */
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +9,8 @@ body {
     color: #5a4a4a;
     overflow-x: hidden;
     background: #fff5f5;
+    font-weight: 400;
+    line-height: 1.6;
 }
 
 .parallax-section {
@@ -63,56 +64,74 @@ body {
     transform: translateY(0);
 }
 
+/* Заголовки */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-style: italic;
+    color: #5a4a4a;
+    line-height: 1.4;
+}
+
 h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 4rem;
-    margin-bottom: 30px;
-    color: #d87093;
-    text-shadow: 
-        2px 2px 0px rgba(255, 255, 255, 0.8),
-        0 0 20px rgba(216, 112, 147, 0.7);
-    font-weight: 700;
-    letter-spacing: 3px;
-    line-height: 1.2;
+    font-size: 3rem;
+    margin-bottom: 25px;
 }
 
 h2 {
-    font-family: 'Cinzel', serif;
-    font-size: 3rem;
-    margin-bottom: 25px;
-    color: #d87093;
-    text-shadow: 0 0 20px rgba(216, 112, 147, 0.3);
-    letter-spacing: 2px;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 h3 {
-    font-family: 'Cinzel', serif;
     font-size: 2rem;
-    margin-bottom: 20px;
-    color: #d87093;
-    letter-spacing: 1px;
+    margin-bottom: 15px;
 }
 
-.bride-name {
-    font-family: 'Cinzel', serif;
-    font-size: 3.5rem !important;
-    color: #d87093;
-    margin: 20px 0;
-    text-shadow: 0 0 20px rgba(216, 112, 147, 0.4);
-}
-
+/* Основной текст */
 p {
-    font-size: 1.4rem;
-    line-height: 1.8;
-    margin-bottom: 25px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    line-height: 1.7;
     color: #5a4a4a;
-    opacity: 0.9;
-    font-weight: 300;
+    font-weight: 400;
+    margin-bottom: 20px;
 }
 
-.pink-text {
-    color: #d87093;
-    text-shadow: 0 0 10px rgba(216, 112, 147, 0.2);
+/* Особые акценты */
+strong, b {
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* Стили для изображения невесты */
+.bride-image-top {
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    transform: translateX(-50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.bride-image-top .bride-image {
+    max-width: 750px;
+    max-height: 130vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 25px rgba(0, 0, 0, 0.2));
+    opacity: 0.9;
+    animation: gentleFloat 4s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 /* Текст приветствия */
@@ -135,6 +154,14 @@ p {
     border: 1px solid rgba(216, 112, 147, 0.3);
 }
 
+.bride-name {
+    font-size: 3rem !important;
+    font-weight: 600;
+    font-style: italic;
+    color: #8B4513;
+    margin: 20px 0;
+}
+
 .date-box {
     background: linear-gradient(135deg, rgba(216, 112, 147, 0.15) 0%, rgba(255, 182, 193, 0.1) 100%);
     backdrop-filter: blur(15px);
@@ -144,6 +171,66 @@ p {
     margin: 40px 0;
     display: inline-block;
     box-shadow: 0 10px 30px rgba(216, 112, 147, 0.15);
+}
+
+/* Стили для галереи программы */
+.program-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin: 50px 0;
+    max-width: 900px;
+}
+
+.program-item-image {
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.program-item-image:hover {
+    transform: translateY(-5px);
+}
+
+.image-frame {
+    background: linear-gradient(135deg, rgba(216, 112, 147, 0.15) 0%, rgba(255, 182, 193, 0.1) 100%);
+    border: 3px solid rgba(216, 112, 147, 0.3);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(216, 112, 147, 0.15);
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.program-item-image:hover .image-frame {
+    border-color: rgba(216, 112, 147, 0.6);
+    box-shadow: 0 12px 30px rgba(216, 112, 147, 0.25);
+    transform: scale(1.05);
+}
+
+.program-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.program-caption {
+    text-align: center;
+}
+
+.program-caption strong {
+    font-size: 1.3rem;
+    color: #d87093;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 0 0 10px rgba(216, 112, 147, 0.2);
 }
 
 .countdown {
@@ -168,7 +255,7 @@ p {
     font-size: 3rem;
     font-weight: bold;
     display: block;
-    font-family: 'Cinzel', serif;
+    font-family: 'Playfair Display', serif;
     text-shadow: 0 0 10px rgba(216, 112, 147, 0.3);
 }
 
@@ -217,7 +304,7 @@ p {
 }
 
 .calendar-header {
-    font-family: 'Cinzel', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 2rem;
     color: #d87093;
     margin-bottom: 30px;
@@ -270,108 +357,6 @@ p {
     border: none;
 }
 
-/* Стили для галереи программы */
-.program-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    margin: 50px 0;
-    max-width: 900px;
-}
-
-.program-item-image {
-    text-align: center;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.program-item-image:hover {
-    transform: translateY(-5px);
-}
-
-.image-frame {
-    background: linear-gradient(135deg, rgba(216, 112, 147, 0.15) 0%, rgba(255, 182, 193, 0.1) 100%);
-    border: 4px solid rgba(216, 112, 147, 0.3);
-    border-radius: 20px;
-    padding: 25px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 25px rgba(216, 112, 147, 0.15);
-    margin-bottom: 15px;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.program-item-image:hover .image-frame {
-    border-color: rgba(216, 112, 147, 0.6);
-    box-shadow: 0 12px 30px rgba(216, 112, 147, 0.25);
-    transform: scale(1.05);
-}
-
-.program-image {
-    width: 170px;
-    height: 170px;
-    object-fit: cover;
-    border-radius: 20px;
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
-}
-
-.program-caption {
-    text-align: center;
-}
-
-.program-caption strong {
-    font-size: 1.3rem;
-    color: #d87093;
-    font-family: 'Cinzel', serif;
-    text-shadow: 0 0 10px rgba(216, 112, 147, 0.2);
-}
-
-/* Адаптивность для мобильных */
-@media (max-width: 768px) {
-    .program-gallery {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .program-image {
-        width: 140px;
-        height: 140px;
-    }
-    
-    .image-frame {
-        padding: 20px;
-    }
-    
-    .program-caption strong {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .program-gallery {
-        gap: 25px;
-    }
-    
-    .program-image {
-        width: 70px;
-        height: 70px;
-    }
-    
-    .image-frame {
-        padding: 12px;
-        border-radius: 15px;
-    }
-    
-    .program-caption strong {
-        font-size: 1.1rem;
-    }
-}
-
-
 /* Дресс-код */
 .dress-code-image-container {
     max-width: 500px;
@@ -405,7 +390,7 @@ p {
     color: white;
     padding: 10px 20px;
     border-radius: 25px;
-    font-family: 'Cinzel', serif;
+    font-family: 'Playfair Display', serif;
     font-weight: bold;
     font-size: 1.1rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -418,36 +403,6 @@ p {
 
 .dress-code-label.right {
     right: 20px;
-}
-
-/* Стили для изображения с анимацией */
-.bride-image-top {
-    position: absolute;
-    top: 15%;
-    left: 20%;
-    transform: translateX(-50%);
-    z-index: 1;
-    pointer-events: none;
-}
-
-.bride-image-top .bride-image {
-    width: 750px;
-    height: 130vh;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    filter: drop-shadow(0 8px 25px rgba(0, 0, 0, 0.2));
-    opacity: 0.9;
-    animation: gentleFloat 4s ease-in-out infinite;
-}
-
-@keyframes gentleFloat {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
 }
 
 /* Форма */
@@ -523,7 +478,7 @@ p {
     border-radius: 25px;
     font-size: 1.2rem;
     font-weight: bold;
-    font-family: 'Cinzel', serif;
+    font-family: 'Playfair Display', serif;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(216, 112, 147, 0.3);
@@ -627,11 +582,32 @@ p {
     font-size: 1.2rem;
 }
 
+/* Адаптивность */
 @media (max-width: 768px) {
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2.2rem; }
-    .bride-name { font-size: 2.8rem !important; }
-    h3 { font-size: 1.8rem; }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.6rem; }
+    .bride-name { font-size: 2.2rem !important; }
+    p { font-size: 1.2rem; }
+    
+    .program-gallery {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .program-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .image-frame {
+        padding: 15px;
+    }
+    
+    .program-caption strong {
+        font-size: 1.2rem;
+    }
+    
     .countdown { flex-wrap: wrap; gap: 15px; }
     .countdown-item { min-width: 80px; padding: 20px 15px; }
     .countdown-number { font-size: 2rem; }
@@ -640,4 +616,34 @@ p {
     .dress-code-image { max-width: 300px; }
     .calendar-container { padding: 20px; }
     .calendar-day { padding: 12px; }
+    
+    .bride-image-top .bride-image {
+        max-width: 400px;
+        max-height: 80vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .program-gallery {
+        gap: 25px;
+    }
+    
+    .program-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .image-frame {
+        padding: 12px;
+        border-radius: 15px;
+    }
+    
+    .program-caption strong {
+        font-size: 1.1rem;
+    }
+    
+    .bride-image-top .bride-image {
+        max-width: 300px;
+        max-height: 60vh;
+    }
 }
