@@ -271,24 +271,107 @@ p {
     border: none;
 }
 
-.program-item {
-    background: linear-gradient(135deg, rgba(216, 112, 147, 0.15) 0%, rgba(255, 182, 193, 0.1) 100%);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(216, 112, 147, 0.3);
-    padding: 30px;
-    border-radius: 15px;
-    margin: 20px 0;
-    text-align: left;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    transition: all 0.3s ease;
+/* Стили для галереи программы */
+.program-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin: 50px 0;
+    max-width: 900px;
 }
 
-.program-item:hover {
-    transform: translateX(10px);
-    box-shadow: 0 10px 25px rgba(216, 112, 147, 0.2);
+.program-item-image {
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.program-item-image:hover {
+    transform: translateY(-5px);
+}
+
+.image-frame {
+    background: linear-gradient(135deg, rgba(216, 112, 147, 0.15) 0%, rgba(255, 182, 193, 0.1) 100%);
+    border: 3px solid rgba(216, 112, 147, 0.3);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(216, 112, 147, 0.15);
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.program-item-image:hover .image-frame {
+    border-color: rgba(216, 112, 147, 0.6);
+    box-shadow: 0 12px 30px rgba(216, 112, 147, 0.25);
+    transform: scale(1.05);
+}
+
+.program-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 15px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.program-caption {
+    text-align: center;
+}
+
+.program-caption strong {
+    font-size: 1.3rem;
+    color: #d87093;
+    font-family: 'Cinzel', serif;
+    text-shadow: 0 0 10px rgba(216, 112, 147, 0.2);
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .program-gallery {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .program-image {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .image-frame {
+        padding: 15px;
+    }
+    
+    .program-caption strong {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .program-gallery {
+        gap: 25px;
+    }
+    
+    .program-image {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .image-frame {
+        padding: 12px;
+        border-radius: 15px;
+    }
+    
+    .program-caption strong {
+        font-size: 1.1rem;
+    }
+}
+
 
 /* Дресс-код */
 .dress-code-image-container {
