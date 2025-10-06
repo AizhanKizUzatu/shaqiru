@@ -432,8 +432,8 @@ p {
 }
 
 .bride-image-top .bride-image {
-    max-width: 750px;
-    max-height: 130vh;
+    width: 750px;
+    height: 130vh;
     width: auto;
     height: auto;
     object-fit: contain;
