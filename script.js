@@ -1,4 +1,4 @@
-// script.js - остается без изменений, функциональность сохраняется
+// script.js - остается без изменений
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('.parallax-section');
     const contents = document.querySelectorAll('.content');
@@ -52,73 +52,19 @@ document.addEventListener('DOMContentLoaded', function() {
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
         
-        const daysElement = document.getElementById('days');
-        const hoursElement = document.getElementById('hours');
-        const minutesElement = document.getElementById('minutes');
-        const secondsElement = document.getElementById('seconds');
+        const daysEl = document.getElementById('days');
+        const hoursEl = document.getElementById('hours');
+        const minutesEl = document.getElementById('minutes');
+        const secondsEl = document.getElementById('seconds');
         
-        if (daysElement) daysElement.textContent = days.toString().padStart(2, '0');
-        if (hoursElement) hoursElement.textContent = hours.toString().padStart(2, '0');
-        if (minutesElement) minutesElement.textContent = minutes.toString().padStart(2, '0');
-        if (secondsElement) secondsElement.textContent = seconds.toString().padStart(2, '0');
+        if (daysEl) daysEl.textContent = days.toString().padStart(2, '0');
+        if (hoursEl) hoursEl.textContent = hours.toString().padStart(2, '0');
+        if (minutesEl) minutesEl.textContent = minutes.toString().padStart(2, '0');
+        if (secondsEl) secondsEl.textContent = seconds.toString().padStart(2, '0');
     }
     
-    updateCountdown();
     setInterval(updateCountdown, 1000);
-    
-    // Управление музыкой
-    const audioControl = document.getElementById('audioControl');
-    const music = document.getElementById('bg-music');
-    
-    if (audioControl && music) {
-        let isPlaying = false;
-        
-        audioControl.addEventListener('click', function() {
-            if (isPlaying) {
-                music.pause();
-                audioControl.innerHTML = '<i class="fas fa-play"></i>';
-            } else {
-                music.play().catch(error => {
-                    console.log('Не удалось запустить музыку');
-                });
-                audioControl.innerHTML = '<i class="fas fa-pause"></i>';
-            }
-            isPlaying = !isPlaying;
-        });
-    }
-    
-    // Обработка формы
-    const form = document.getElementById('attendanceForm');
-    const message = document.getElementById('message');
-    
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const attendance = document.querySelector('input[name="attendance"]:checked');
-            
-            if (!name || !attendance) {
-                showMessage('Барлық өрістерді толтырыңыз', 'error');
-                return;
-            }
-            
-            showMessage('Сіздің жауабыңыз сәтті жіберілді!', 'success');
-            form.reset();
-        });
-    }
-    
-    function showMessage(text, type) {
-        if (message) {
-            message.textContent = text;
-            message.className = 'message ' + type;
-            message.style.display = 'block';
-            
-            setTimeout(() => {
-                message.style.display = 'none';
-            }, 5000);
-        }
-    }
+    updateCountdown();
     
     // Параллакс эффект
     window.addEventListener('scroll', function() {
@@ -127,7 +73,56 @@ document.addEventListener('DOMContentLoaded', function() {
         
         parallaxElements.forEach(element => {
             const speed = 0.5;
-            element.style.transform = `translateY(${scrolled * speed}px)`;
+            const yPos = -(scrolled * speed);
+            element.style.transform = `translateY(${yPos}px)`;
         });
     });
+
+    // Обработка формы
+    const form = document.getElementById('attendanceForm');
+    const messageDiv = document.getElementById('message');
+
+    if (form && messageDiv) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name'),
+                attendance: formData.get('attendance')
+            };
+
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbymR8vXztyWVqvjsfbuEHW00bFp7VqedODVu1MXwBoeR8UdkVkFzp_ce_CJWNT5E-SP/exec';
+
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new URLSearchParams(data),
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    showMessage('Сіздің жауабыңыз сәтті жіберілді! Рахмет!', 'success');
+                    form.reset();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showMessage('Қате орын алды. Өтінеміз, кейінірек қайталап көріңіз.', 'error');
+            });
+        });
+
+        function showMessage(text, type) {
+            messageDiv.textContent = text;
+            messageDiv.className = `message ${type}`;
+            messageDiv.style.display = 'block';
+            
+            setTimeout(() => {
+                messageDiv.style.display = 'none';
+            }, 5000);
+        }
+    }
 });
