@@ -342,15 +342,15 @@ p {
 .bride-image-top {
     position: absolute;
     top: 15%;
-    left: 50%;
+    left: 20%;
     transform: translateX(-50%);
     z-index: 1;
     pointer-events: none;
 }
 
 .bride-image-top .bride-image {
-    max-width: 280px;
-    max-height: 40vh;
+    max-width: 450px;
+    max-height: 70vh;
     width: auto;
     height: auto;
     object-fit: contain;
