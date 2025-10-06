@@ -67,11 +67,10 @@ h1 {
     font-family: 'Cinzel', serif;
     font-size: 4rem;
     margin-bottom: 30px;
-    background: linear-gradient(45deg, #d87093, #ffb6c1, #d87093);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: 0 0 30px rgba(216, 112, 147, 0.3);
+    color: #d87093;
+    text-shadow: 
+        2px 2px 0px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(216, 112, 147, 0.7);
     font-weight: 700;
     letter-spacing: 3px;
     line-height: 1.2;
