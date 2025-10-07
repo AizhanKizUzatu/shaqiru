@@ -224,8 +224,7 @@
         </div>
     </section>
 
-    <!-- Секция 5: Форма подтверждения -->
-  <!-- Секция 5: Форма подтверждения -->
+<!-- Секция 5: Форма подтверждения -->
 <section class="parallax-section" id="section5">
     <div class="parallax-bg bg-5"></div>
     <div class="bg-overlay"></div>
@@ -268,7 +267,10 @@
                 <!-- Количество людей -->
                 <div class="form-section">
                     <label class="section-label">Қанша адам келесіз?</label>
-                    <input type="number" id="people_count" name="people_count" class="number-input" value="1" min="1" required>
+                    <div class="number-section">
+                        <span class="number-label">Адам саны:</span>
+                        <input type="number" id="people_count" name="people_count" class="number-input" value="1" min="1" max="10" required>
+                    </div>
                 </div>
 
                 <!-- Сообщение -->
