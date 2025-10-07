@@ -78,51 +78,91 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Обработка формы
-    const form = document.getElementById('attendanceForm');
+
+    
+// Отправка формы
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyW6Dv9gVmrPShnbcEr_9Y_4WdB0LVSLxrtKfas9_kS4E6V36ucpRWrr6YGaKQkqD6z/exec';
+
+document.getElementById('attendanceForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
+    
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = submitBtn.querySelector('.btn-text');
+    const btnLoader = submitBtn.querySelector('.btn-loader');
     const messageDiv = document.getElementById('message');
-
-    if (form && messageDiv) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(form);
-            const data = {
-                name: formData.get('name'),
-                attendance: formData.get('attendance')
-            };
-
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbymR8vXztyWVqvjsfbuEHW00bFp7VqedODVu1MXwBoeR8UdkVkFzp_ce_CJWNT5E-SP/exec';
-
-            fetch(scriptURL, {
-                method: 'POST',
-                body: new URLSearchParams(data),
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    showMessage('Сіздің жауабыңыз сәтті жіберілді! Рахмет!', 'success');
-                    form.reset();
-                } else {
-                    throw new Error('Network response was not ok');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                showMessage('Қате орын алды. Өтінеміз, кейінірек қайталап көріңіз.', 'error');
-            });
-        });
-
-        function showMessage(text, type) {
-            messageDiv.textContent = text;
-            messageDiv.className = `message ${type}`;
-            messageDiv.style.display = 'block';
-            
-            setTimeout(() => {
-                messageDiv.style.display = 'none';
-            }, 5000);
-        }
+    
+    // Получаем данные формы
+    const formData = new FormData(this);
+    const name = formData.get('name');
+    const attendance = formData.get('attendance');
+    const people_count = formData.get('people_count');
+    
+    // Валидация
+    if (!name.trim()) {
+        showMessage('Аты-жөніңізді енгізіңіз!', 'error');
+        return;
     }
+    
+    if (!attendance) {
+        showMessage('Қатысу вариантын таңдаңыз!', 'error');
+        return;
+    }
+    
+    // Блокируем кнопку на время отправки
+    submitBtn.disabled = true;
+    btnText.style.display = 'none';
+    btnLoader.style.display = 'block';
+    
+    try {
+        const params = new URLSearchParams({
+            name: name.trim(),
+            attendance: attendance,
+            people_count: people_count
+        });
+        
+        const response = await fetch(SCRIPT_URL, {
+            method: 'POST',
+            body: params,
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        });
+        
+        const result = await response.text();
+        
+        if (response.ok) {
+            showMessage('Сіздің жауабыңыз сәтті жіберілді! Рахмет!', 'success');
+            this.reset();
+            // Сбрасываем количество людей на 1
+            document.getElementById('people_count').value = '1';
+        } else {
+            throw new Error('Сервер қатесі');
+        }
+        
+    } catch (error) {
+        console.error('Error:', error);
+        showMessage('Жіберу кезінде қате орын алды. Қайталап көріңіз.', 'error');
+    } finally {
+        // Разблокируем кнопку
+        submitBtn.disabled = false;
+        btnText.style.display = 'block';
+        btnLoader.style.display = 'none';
+    }
+});
+
+function showMessage(text, type) {
+    const messageDiv = document.getElementById('message');
+    messageDiv.textContent = text;
+    messageDiv.className = `message ${type}`;
+    messageDiv.style.display = 'block';
+    
+    // Автоматически скрываем сообщение через 5 секунд
+    setTimeout(() => {
+        messageDiv.style.display = 'none';
+    }, 5000);
+}
+
+// Автоматический выбор первого варианта при загрузке
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('input[value="Ия, бүйірге келемін"]').checked = true;
 });
