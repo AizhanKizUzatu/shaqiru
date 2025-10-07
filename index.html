@@ -229,42 +229,70 @@
     </section>
 
     <!-- Секция 5: Форма подтверждения -->
-    <section class="parallax-section" id="section5">
-        <div class="parallax-bg bg-5"></div>
-        <div class="bg-overlay"></div>
-        <div class="content">
-            <h2>Қатысуынызды растаңыз</h2>
+  <!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Қатысуды растау</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-card">
+            <h1 class="form-title">Қатысуды растау</h1>
             
-            <div class="form-container">
-                <form id="attendanceForm">
-                    <div class="form-group">
-                        <label class="form-label" for="name">Аты-жөніңіз</label>
-                        <input type="text" id="name" name="name" class="form-input" required placeholder="Толық аты-жөніңізді енгізіңіз">
+            <form id="attendanceForm" class="attendance-form">
+                <!-- ФИО -->
+                <div class="form-section">
+                    <label class="section-label">Аты-жөніңіз</label>
+                    <p class="section-description">Толық аты-жөніңізді енгізіңіз</p>
+                    <input type="text" id="name" name="name" class="text-input" placeholder="Аты-жөніңіз" required>
+                </div>
+
+                <!-- Аттенданс -->
+                <div class="form-section">
+                    <label class="section-label">Қатысасыз ба?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="attendance" value="Ия, бүйірге келемін" required>
+                            <span class="radio-custom"></span>
+                            <span class="radio-text">Ия, бүйірге келемін</span>
+                        </label>
+                        
+                        <label class="radio-option">
+                            <input type="radio" name="attendance" value="Жұбайыммен келемін">
+                            <span class="radio-custom"></span>
+                            <span class="radio-text">Жұбайыммен келемін</span>
+                        </label>
+                        
+                        <label class="radio-option">
+                            <input type="radio" name="attendance" value="Жоқ, келе алмаймын">
+                            <span class="radio-custom"></span>
+                            <span class="radio-text">Жоқ, келе алмаймын</span>
+                        </label>
                     </div>
-                    
-                    <div class="form-group">
-                        <label class="form-label">Қатысасыз ба?</label>
-                        <div class="checkbox-group">
-                            <label class="checkbox-label">
-                                <input type="radio" name="attendance" value="Иә, қатысамын" class="checkbox-input" required>
-                                <span>Иә, қатысамын</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="radio" name="attendance" value="Жоқ, қатыспаймын" class="checkbox-input" required>
-                                <span>Жоқ, қатыспаймын</span>
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane"></i> Жіберу
-                    </button>
-                </form>
-                
+                </div>
+
+                <!-- Количество людей -->
+                <div class="form-section">
+                    <label class="section-label">Қанша адам келесіз?</label>
+                    <input type="number" id="people_count" name="people_count" class="number-input" value="1" min="1" required>
+                </div>
+
+                <!-- Сообщение -->
                 <div id="message" class="message"></div>
-            </div>
+
+                <!-- Кнопка отправки -->
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span class="btn-text">жауапты жіберу</span>
+                    <div class="btn-loader" style="display: none;">Жіберілуде...</div>
+                </button>
+            </form>
         </div>
-    </section>
+    </div>
+    <script src="script.js"></script>
+
 
     <!-- Фон и музыка -->
     <audio id="bg-music" loop>
