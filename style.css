@@ -847,3 +847,66 @@ strong, b {
         max-height: 60vh;
     }
 }
+
+/* Надпись над календарем */
+.calendar-title {
+    background: linear-gradient(135deg, rgba(216, 112, 147, 0.15) 0%, rgba(255, 182, 193, 0.1) 100%);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(216, 112, 147, 0.3);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 30px auto;
+    max-width: 600px;
+    box-shadow: 0 8px 25px rgba(216, 112, 147, 0.15);
+    text-align: center;
+}
+
+.calendar-title h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #D4AF37;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.calendar-title p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #D4AF37;
+    line-height: 1.6;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
+}
+
+/* Адаптивность для надписи */
+@media (max-width: 768px) {
+    .calendar-title {
+        padding: 25px;
+        margin: 25px auto;
+        max-width: 500px;
+    }
+    
+    .calendar-title h3 {
+        font-size: 1.6rem;
+    }
+    
+    .calendar-title p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-title {
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 400px;
+    }
+    
+    .calendar-title h3 {
+        font-size: 1.4rem;
+    }
+    
+    .calendar-title p {
+        font-size: 1.1rem;
+    }
+}
