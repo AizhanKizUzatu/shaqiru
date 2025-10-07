@@ -364,7 +364,7 @@ strong, b {
 
 /* Дресс-код */
 .dress-code-image-container {
-    max-width: 500px;
+    width: 500px;
     margin: 30px auto;
     text-align: center;
 }
@@ -375,7 +375,7 @@ strong, b {
 }
 
 .dress-code-image {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     border-radius: 15px;
     border: 3px solid rgba(216, 112, 147, 0.5);
