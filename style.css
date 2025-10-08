@@ -1003,3 +1003,35 @@ strong, b {
         max-height: 400px;
     }
 }
+
+/* Общая рамка приглашения */
+.invitation-combined {
+    background: linear-gradient(135deg, rgba(216, 112, 147, 0.15) 0%, rgba(255, 182, 193, 0.1) 100%);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(216, 112, 147, 0.3);
+    padding: 50px;
+    border-radius: 20px;
+    margin: 40px 0;
+    box-shadow: 0 10px 30px rgba(216, 112, 147, 0.15);
+    text-align: center;
+}
+
+.greeting-list {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.invitation-content {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(216, 112, 147, 0.2);
+}
+
+.invitation-message {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    font-style: italic;
+    color: #d87093;
+}
