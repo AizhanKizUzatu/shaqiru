@@ -44,11 +44,11 @@ body {
     z-index: -1;
 }
 
-.bg-1 { background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800"><defs><radialGradient id="g1" cx="30%" cy="30%"><stop offset="0%" stop-color="%23fff5f5"/><stop offset="100%" stop-color="%23ffeef0"/></radialGradient></defs><rect fill="url(%23g1)" width="1200" height="800"/><circle fill="%23d87093" cx="100" cy="100" r="2" opacity="0.8"/><circle fill="%23d87093" cx="300" cy="200" r="1" opacity="0.6"/><circle fill="%23d87093" cx="500" cy="150" r="1.5" opacity="0.7"/><circle fill="%23d87093" cx="700" cy="300" r="1" opacity="0.5"/><circle fill="%23d87093" cx="900" cy="250" r="2" opacity="0.9"/></svg>'); }
-.bg-2 { background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800"><defs><linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="%23ffeef0"/><stop offset="100%" stop-color="%23fff5f5"/></linearGradient></defs><rect fill="url(%23g2)" width="1200" height="800"/></svg>'); }
-.bg-3 { background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800"><defs><linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="%23fff5f5"/><stop offset="100%" stop-color="%23ffeef0"/></linearGradient></defs><rect fill="url(%23g3)" width="1200" height="800"/></svg>'); }
-.bg-4 { background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800"><defs><radialGradient id="g4" cx="70%" cy="70%"><stop offset="0%" stop-color="%23ffeef0"/><stop offset="100%" stop-color="%23fff5f5"/></radialGradient></defs><rect fill="url(%23g4)" width="1200" height="800"/></svg>'); }
-.bg-5 { background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800"><defs><linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="%23fff5f5"/><stop offset="100%" stop-color="%23ffeef0"/></linearGradient></defs><rect fill="url(%23g5)" width="1200" height="800"/></svg>'); }
+.bg-1 { background: linear-gradient(135deg, rgba(183, 150, 212, 0.4) 0%, rgba(200, 170, 225, 0.3) 100%); }
+.bg-2 { background: linear-gradient(135deg, rgba(173, 140, 202, 0.35) 0%, rgba(190, 160, 215, 0.25) 100%); }
+.bg-3 { background: linear-gradient(135deg, rgba(193, 160, 222, 0.38) 0%, rgba(210, 180, 235, 0.28) 100%); }
+.bg-4 { background: linear-gradient(135deg, rgba(163, 130, 192, 0.32) 0%, rgba(180, 150, 205, 0.22) 100%); }
+.bg-5 { background: linear-gradient(135deg, rgba(203, 170, 232, 0.42) 0%, rgba(220, 190, 245, 0.32) 100%); }
 
 .content {
     text-align: center;
@@ -943,7 +943,7 @@ strong, b {
     max-width: 600px;
     max-height: 600px;
     border-radius: 50%;
-    background: linear-gradient(135deg, rgba(216, 112, 147, 0.2) 0%, rgba(255, 182, 193, 0.15) 100%);
+    background: linear-gradient(135deg, rgba(183, 150, 212, 0.3) 0%, rgba(200, 170, 225, 0.2) 100%);
     backdrop-filter: blur(20px);
     border: 3px solid rgba(216, 112, 147, 0.4);
     box-shadow: 
