@@ -910,3 +910,96 @@ strong, b {
         font-size: 1.1rem;
     }
 }
+/* Главная секция с фото */
+.hero-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 600;
+    font-style: italic;
+    color: #D4AF37;
+    margin-bottom: 10px;
+    text-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+}
+
+.main-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    font-style: italic;
+    color: #D4AF37;
+    margin-bottom: 40px;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+/* Круглая рамка с фото */
+.bride-hero-frame {
+    width: 70vmin;
+    height: 70vmin;
+    max-width: 600px;
+    max-height: 600px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(216, 112, 147, 0.2) 0%, rgba(255, 182, 193, 0.15) 100%);
+    backdrop-filter: blur(20px);
+    border: 3px solid rgba(216, 112, 147, 0.4);
+    box-shadow: 
+        0 0 60px rgba(216, 112, 147, 0.4),
+        inset 0 0 60px rgba(255, 255, 255, 0.1);
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bride-hero-image {
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+}
+
+/* Контент для скролла */
+.scroll-content {
+    margin-top: 50px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 3rem;
+    }
+    
+    .main-subtitle {
+        font-size: 2rem;
+    }
+    
+    .bride-hero-frame {
+        width: 80vmin;
+        height: 80vmin;
+        max-width: 500px;
+        max-height: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .main-subtitle {
+        font-size: 1.8rem;
+    }
+    
+    .bride-hero-frame {
+        width: 85vmin;
+        height: 85vmin;
+        max-width: 400px;
+        max-height: 400px;
+    }
+}
