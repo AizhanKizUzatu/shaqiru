@@ -23,26 +23,31 @@
         <div class="dot" data-section="4"></div>
     </div>
 
-    <!-- Секция 1: Главная -->
-    <section class="parallax-section" id="section1">
-        <div class="parallax-bg bg-1"></div>
-        <div class="bg-overlay"></div>
+    
+<!-- Секция 1: Главная -->
+<section class="parallax-section" id="section1">
+    <div class="parallax-bg bg-1"></div>
+    <div class="bg-overlay"></div>
 
-        <!-- Декоративные элементы -->
-        <div class="floral-decoration" style="top: 10%; left: 10%;">❦</div>
-        <div class="floral-decoration" style="top: 15%; right: 15%;">✻</div>
-        <div class="floral-decoration" style="bottom: 20%; left: 20%;">❁</div>
+    <!-- Декоративные элементы -->
+    <div class="floral-decoration" style="top: 10%; left: 10%;">❦</div>
+    <div class="floral-decoration" style="top: 15%; right: 15%;">✻</div>
+    <div class="floral-decoration" style="bottom: 20%; left: 20%;">❁</div>
 
-        <!-- Изображение девушки на уровне текста -->
-        <div class="bride-image-top">
-            <img src="brider.png" alt="Айжан" class="bride-image">
-        </div>
-        
-        <div class="content">
-            <!-- Заголовок -->
-            <h1>Айжан<br>Қыз Ұзату</h1>
-            <div class="divider"></div>
+    <div class="content">
+        <!-- Главный заголовок и круглое фото -->
+        <div class="hero-section">
+            <h1 class="main-title">Айжан</h1>
+            <h2 class="main-subtitle">Қыз Ұзату</h2>
             
+            <!-- Круглая рамка с фото -->
+            <div class="bride-hero-frame">
+                <img src="brider.png" alt="Айжан" class="bride-hero-image">
+            </div>
+        </div>
+
+        <!-- Остальной контент (будет ниже при скролле) -->
+        <div class="scroll-content">
             <!-- Обращение к гостям -->
             <div class="greeting-text">
                 <h2>Құрметті қонақтар!</h2>
@@ -68,12 +73,13 @@
                 <p style="font-size: 1.3rem; margin-top: 10px;">Сәтті сағат 18:00</p>
             </div>
 
-               <!-- Надпись над календарем -->
-        <div class="calendar-title">
-            <h3>Той иелері:</h3>
-            <p style="font-size: 1.3rem; line-height: 1.6; margin-top: 10px;">
-               Ата-анасы: Еркiн-Светлана
-            </p>
+            <!-- Надпись над календарем -->
+            <div class="calendar-title">
+                <h3>Той иелері:</h3>
+                <p style="font-size: 1.3rem; line-height: 1.6; margin-top: 10px;">
+                    Ата-анасы: Еркiн-Светлана
+                </p>
+            </div>
 
             <!-- Календарь Ноября 2025 -->
             <div class="calendar-container">
@@ -127,7 +133,8 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Секция 2: Место проведения -->
     <section class="parallax-section" id="section2">
