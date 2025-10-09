@@ -364,8 +364,8 @@ strong, b {
 
 /* Дресс-код */
 .dress-code-image-container {
-    width: 500px;
-    margin: 30px auto;
+    width: 700px;
+    margin: 50px auto;
     text-align: center;
 }
 
@@ -384,7 +384,7 @@ strong, b {
 }
 
 .dress-code-image:hover {
-    transform: scale(1.02);
+    transform: scale(1.7);
     box-shadow: 0 15px 40px rgba(216, 112, 147, 0.3);
 }
 
