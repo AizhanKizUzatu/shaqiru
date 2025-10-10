@@ -258,7 +258,7 @@ strong, b {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     margin: 50px 0;
-    max-width: 900px;
+    mwidth: 900px;
 }
 
 .program-item-image {
