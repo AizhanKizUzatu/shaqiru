@@ -975,22 +975,12 @@ strong, b {
 
 
 .countdown-title {
-    text-align: center;
-    margin-bottom: 30px;
-    width: 100%;
-}
-
-.countdown-title h3 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
     color: #2C5D63;
-    margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 25px;
     font-style: italic;
-}
-
-.event-date {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    color: #2C5D63;
-    opacity: 0.9;
+    text-shadow: 0 0 10px rgba(121, 180, 169, 0.3);
+    width: 100%;
 }
