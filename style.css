@@ -6,14 +6,12 @@
 
 /* ОСНОВНОЙ ФОН САЙТА С ПАТТЕРНОМ */
 body {
-    font-family: 'Playfair Display', serif;
-    color: #2C5D63;
-    overflow-x: hidden;
-    background: 
-        url('flowerz.png') repeat,
-        #F0F7F4;
-    font-weight: 400;
-    line-height: 1.6;
+ font-family: 'Playfair Display', serif;
+color: #2C5D63;
+overflow-x: hidden;
+background: url('flowerz.png') repeat;
+font-weight: 400;
+line-height: 1.6;
 }
 
 .parallax-section {
