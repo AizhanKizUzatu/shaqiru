@@ -968,4 +968,6 @@ strong, b {
 .bride-hero-frame,
 .dress-code-image {
     border: none !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
 }
