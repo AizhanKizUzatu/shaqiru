@@ -970,4 +970,5 @@ strong, b {
     border: none !important;
     background: transparent !important;
     backdrop-filter: none !important;
+    box-shadow: none !important;
 }
