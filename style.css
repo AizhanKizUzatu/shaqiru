@@ -951,3 +951,21 @@ strong, b {
         padding: 8px 15px;
     }
 }
+
+/* УБРАТЬ ВСЕ RAMKИ */
+.content, 
+.invitation-combined, 
+.date-box, 
+.location-info, 
+.calendar-container,
+.form-card,
+.image-frame,
+.countdown-item,
+.calendar-day,
+.text-input, 
+.number-input,
+.radio-option,
+.bride-hero-frame,
+.dress-code-image {
+    border: none !important;
+}
