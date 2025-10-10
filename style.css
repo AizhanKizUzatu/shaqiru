@@ -972,3 +972,25 @@ strong, b {
     backdrop-filter: none !important;
     box-shadow: none !important;
 }
+
+
+.countdown-title {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.countdown-title h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #2C5D63;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.event-date {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: #2C5D63;
+    opacity: 0.9;
+}
