@@ -12,7 +12,7 @@
 
 /* ОСНОВНОЙ ФОН САЙТА С ПАТТЕРНОМ */
 body {
-font-family: 'KZ Balmoral', 'Playfair Display', serif;
+font-family: 'Playfair Display', serif;
 color: #2C5D63;
 overflow-x: hidden;
 background: url('fw2.png') repeat;
@@ -989,6 +989,10 @@ strong, b {
     backdrop-filter: none !important;
     box-shadow: none !important;
 }
-
+/* Применить KZ Balmoral ко всем текстовым элементам кроме календаря */
+h1, h2, h3, h4, h5, h6, p, .invitation-combined, .date-box, 
+.location-info, .countdown, .form-card, .nav-dots {
+    font-family: 'KZ Balmoral', serif !important;
+}
 
 
