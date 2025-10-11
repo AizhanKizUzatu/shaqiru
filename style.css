@@ -168,6 +168,13 @@ strong, b {
     text-align: center;
 }
 
+.invitation-combined h2 {
+    font-family: 'KZ Balmoral', serif;
+    font-size: 3.5rem; /* Увеличьте по необходимости */
+    color: #2C5D63;
+    text-align: center;
+    margin: 20px 0;
+}
 .greeting-list {
     font-family: 'KZ Balmoral', serif;
     font-size: 3.8rem;
