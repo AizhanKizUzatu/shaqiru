@@ -994,5 +994,14 @@ h1, h2, h3, h4, h5, h6, p, .invitation-combined, .date-box,
 .location-info, .countdown, .form-card, .nav-dots {
     font-family: 'KZ Balmoral', serif !important;
 }
-
+/* УВЕЛИЧЕНИЕ В 1.5 РАЗА */
+.main-title,
+.main-subtitle,
+.greeting-list,
+.invitation-message,
+.bride-name,
+.date-box,
+.location-info {
+    transform: scale(1.5) !important;
+}
 
