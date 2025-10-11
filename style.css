@@ -952,6 +952,17 @@ strong, b {
     }
 }
 
+.countdown-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #2C5D63;
+    text-align: center;
+    margin-bottom: 25px;
+    font-style: italic;
+    text-shadow: 0 0 10px rgba(121, 180, 169, 0.3);
+    width: 100%;
+}
+
 /* УБРАТЬ ВСЕ RAMKИ */
 .content, 
 .invitation-combined, 
@@ -974,13 +985,4 @@ strong, b {
 }
 
 
-.countdown-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    color: #2C5D63;
-    text-align: center;
-    margin-bottom: 25px;
-    font-style: italic;
-    text-shadow: 0 0 10px rgba(121, 180, 169, 0.3);
-    width: 100%;
-}
+
