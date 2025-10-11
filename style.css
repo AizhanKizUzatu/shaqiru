@@ -170,7 +170,7 @@ strong, b {
 
 .greeting-list {
     font-family: 'KZ Balmoral', serif;
-    font-size: 2.8rem;
+    font-size: 3.8rem;
     line-height: 1.8;
     font-style: italic;
     margin-bottom: 30px;
@@ -183,7 +183,7 @@ strong, b {
 
 .invitation-message {
     font-family: 'KZ Balmoral', serif;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     line-height: 1.8;
     font-style: italic;
     color: #2C5D63;
@@ -191,7 +191,7 @@ strong, b {
 
 .bride-name {
     font-family: 'KZ Balmoral', serif;
-    font-size: 5rem !important;
+    font-size: 6rem !important;
     font-weight: 600;
     font-style: italic;
     color: #2C5D63;
