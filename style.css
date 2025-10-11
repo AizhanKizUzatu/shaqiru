@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'KZ Balmoral';
+    src: url('kzbalmoral_regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +12,7 @@
 
 /* ОСНОВНОЙ ФОН САЙТА С ПАТТЕРНОМ */
 body {
- font-family: 'Playfair Display', serif;
+font-family: 'KZ Balmoral', 'Playfair Display', serif;
 color: #2C5D63;
 overflow-x: hidden;
 background: url('fw2.png') repeat;
