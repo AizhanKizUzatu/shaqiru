@@ -270,7 +270,7 @@ strong, b {
     justify-content: center;
     gap: 25px;
     margin: 50px 0;
-    flex-direction: row; /* Оставляем column для общей структуры */
+    flex-direction: column; /* Заголовок сверху */
     align-items: center;
 }
 
@@ -288,8 +288,7 @@ strong, b {
     display: flex;
     justify-content: center;
     gap: 25px;
-    flex-direction: row; /* Явно указываем горизонтальное направление */
-    flex-wrap: wrap; /* Если элементов много - перенос на новую строку */
+    flex-direction: row; /* Таймер горизонтально */
 }
 
 .countdown-item {
@@ -297,7 +296,7 @@ strong, b {
     padding: 30px 25px;
     border-radius: 15px;
     min-width: 120px;
-    text-align: center; /* Выравниваем содержимое по центру */
+    text-align: center;
 }
 
 .countdown-number {
