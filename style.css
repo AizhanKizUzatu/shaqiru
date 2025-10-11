@@ -270,7 +270,7 @@ strong, b {
     justify-content: center;
     gap: 25px;
     margin: 50px 0;
-    flex-direction: column;
+    flex-direction: column; /* Оставляем column для общей структуры */
     align-items: center;
 }
 
@@ -288,6 +288,8 @@ strong, b {
     display: flex;
     justify-content: center;
     gap: 25px;
+    flex-direction: row; /* Явно указываем горизонтальное направление */
+    flex-wrap: wrap; /* Если элементов много - перенос на новую строку */
 }
 
 .countdown-item {
@@ -295,6 +297,7 @@ strong, b {
     padding: 30px 25px;
     border-radius: 15px;
     min-width: 120px;
+    text-align: center; /* Выравниваем содержимое по центру */
 }
 
 .countdown-number {
