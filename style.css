@@ -423,7 +423,7 @@ strong, b {
 
 .calendar-day.event {
     background: linear-gradient(135deg, #79B4A9, #A4D8CD);
-    color: white;
+    color: orange;
     font-weight: bold;
     box-shadow: 0 0 20px rgba(121, 180, 169, 0.5);
     transform: scale(1.1);
