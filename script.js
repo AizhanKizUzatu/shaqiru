@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Автоматический выбор первого варианта при загрузке
-        const firstRadio = document.querySelector('input[value="Ия, бүйірге келемін"]');
+        const firstRadio = document.querySelector('input[value="Иә, бұйырса келемін"]');
         if (firstRadio) {
             firstRadio.checked = true;
         }
