@@ -181,6 +181,14 @@ strong, b {
     padding-top: 30px;
 }
 
+.invitation-content h3 {
+    font-family: 'KZ Balmoral', serif;
+    font-size: 3.5rem; /* Настройте размер по желанию */
+    color: #2C5D63;
+    text-align: center;
+    margin: 20px 0;
+    line-height: 1.6;
+}
 .invitation-message {
     font-family: 'KZ Balmoral', serif;
     font-size: 3.9rem;
