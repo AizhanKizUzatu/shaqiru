@@ -270,7 +270,7 @@ strong, b {
     font-size: 3.5rem;
     color: #2C5D63;
     text-align: center;
-    margin-bottom: 25px;
+    margin: 25px 0;
     font-style: italic;
     width: 100%;
 }
@@ -309,10 +309,6 @@ strong, b {
     opacity: 0.9;
     letter-spacing: 1px;
     color: #2C5D63;
-}
-.location-info {
-    padding: 40px;
-    margin: 30px 0;
 }
 
 .location-info h2 {
