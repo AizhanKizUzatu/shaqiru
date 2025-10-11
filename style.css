@@ -270,7 +270,7 @@ strong, b {
     justify-content: center;
     gap: 25px;
     margin: 50px 0;
-    flex-direction: column; /* Оставляем column для общей структуры */
+    flex-direction: row; /* Оставляем column для общей структуры */
     align-items: center;
 }
 
