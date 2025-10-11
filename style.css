@@ -13,13 +13,12 @@
 
 /* ОСНОВНОЙ ФОН САЙТА С ПАТТЕРНОМ */
 body {
-    font-family: 'KZ Balmoral', 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif;
     color: #2C5D63;
     overflow-x: hidden;
     background: url('fw2.png') repeat;
     font-weight: 400;
     line-height: 1.6;
-    font-size: 1.1rem;
 }
 
 .parallax-section {
@@ -29,10 +28,6 @@ body {
     justify-content: center;
     position: relative;
     overflow: hidden;
-}
-
-.bg-overlay {
-    display: none;
 }
 
 .parallax-bg {
@@ -48,6 +43,17 @@ body {
     background: transparent !important;
 }
 
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(240, 247, 244, 0.7);
+    z-index: -1;
+}
+
+/* Убрать старые фоны */
 .bg-1, .bg-2, .bg-3, .bg-4, .bg-5 {
     background: transparent !important;
 }
@@ -66,7 +72,7 @@ body {
     transform: translateY(0);
 }
 
-/* Заголовки */
+/* ЗАГОЛОВКИ С KZ BALMORAL */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'KZ Balmoral', serif;
     font-weight: 500;
@@ -76,27 +82,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 3.2rem;
+    font-size: 4rem;
     margin-bottom: 25px;
     text-shadow: 0 0 10px rgba(121, 180, 169, 0.3);
 }
 
 h2 {
-    font-size: 2.6rem;
+    font-size: 3.2rem;
     margin-bottom: 20px;
     text-shadow: 0 0 10px rgba(121, 180, 169, 0.3);
 }
 
 h3 {
-    font-size: 2.1rem;
+    font-size: 2.5rem;
     margin-bottom: 15px;
     text-shadow: 0 0 10px rgba(121, 180, 169, 0.3);
 }
 
-/* Основной текст */
+/* ОСНОВНОЙ ТЕКСТ С KZ BALMORAL */
 p {
     font-family: 'KZ Balmoral', serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 1.7;
     color: #2C5D63;
     font-weight: 400;
@@ -104,6 +110,7 @@ p {
     text-shadow: 0 0 10px rgba(121, 180, 169, 0.2);
 }
 
+/* Особые акценты */
 strong, b {
     font-weight: 600;
     font-style: italic;
@@ -147,7 +154,7 @@ strong, b {
 
 .main-title {
     font-family: 'KZ Balmoral', serif;
-    font-size: 4.2rem;
+    font-size: 5rem;
     font-weight: 600;
     font-style: italic;
     color: #2C5D63;
@@ -157,7 +164,7 @@ strong, b {
 
 .main-subtitle {
     font-family: 'KZ Balmoral', serif;
-    font-size: 2.8rem;
+    font-size: 3.5rem;
     font-weight: 500;
     font-style: italic;
     color: #2C5D63;
@@ -172,6 +179,12 @@ strong, b {
     max-width: 600px;
     max-height: 600px;
     border-radius: 50%;
+    background: linear-gradient(135deg, rgba(121, 180, 169, 0.3) 0%, rgba(164, 216, 205, 0.2) 100%);
+    backdrop-filter: blur(20px);
+    border: 3px solid rgba(121, 180, 169, 0.4);
+    box-shadow: 
+        0 0 60px rgba(121, 180, 169, 0.4),
+        inset 0 0 60px rgba(255, 255, 255, 0.1);
     margin: 0 auto;
     overflow: hidden;
     display: flex;
@@ -194,13 +207,19 @@ strong, b {
 
 /* Общая рамка приглашения */
 .invitation-combined {
+    background: linear-gradient(135deg, rgba(121, 180, 169, 0.2) 0%, rgba(164, 216, 205, 0.15) 100%);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(121, 180, 169, 0.4);
     padding: 50px;
+    border-radius: 20px;
     margin: 40px 0;
+    box-shadow: 0 10px 30px rgba(121, 180, 169, 0.2);
     text-align: center;
 }
 
 .greeting-list {
-    font-size: 1.6rem;
+    font-family: 'KZ Balmoral', serif;
+    font-size: 2.2rem;
     line-height: 1.8;
     font-style: italic;
     margin-bottom: 30px;
@@ -209,17 +228,20 @@ strong, b {
 .invitation-content {
     margin-top: 30px;
     padding-top: 30px;
+    border-top: 1px solid rgba(121, 180, 169, 0.2);
 }
 
 .invitation-message {
-    font-size: 1.6rem;
+    font-family: 'KZ Balmoral', serif;
+    font-size: 2rem;
     line-height: 1.8;
     font-style: italic;
     color: #2C5D63;
 }
 
 .bride-name {
-    font-size: 3.3rem !important;
+    font-family: 'KZ Balmoral', serif;
+    font-size: 4rem !important;
     font-weight: 600;
     font-style: italic;
     color: #2C5D63;
@@ -228,18 +250,24 @@ strong, b {
 }
 
 .date-box {
+    background: linear-gradient(135deg, rgba(121, 180, 169, 0.2) 0%, rgba(164, 216, 205, 0.15) 100%);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(121, 180, 169, 0.4);
     padding: 40px;
+    border-radius: 20px;
     margin: 40px 0;
     display: inline-block;
+    box-shadow: 0 10px 30px rgba(121, 180, 169, 0.2);
 }
 
 .date-box h3 {
-    font-size: 2.3rem;
+    font-family: 'KZ Balmoral', serif;
+    font-size: 2.8rem;
 }
 
 .date-box p {
-    font-size: 1.6rem;
-    margin-top: 10px;
+    font-family: 'KZ Balmoral', serif;
+    font-size: 2rem;
 }
 
 /* Стили для галереи программы */
@@ -264,6 +292,12 @@ strong, b {
 }
 
 .image-frame {
+    background: linear-gradient(135deg, rgba(121, 180, 169, 0.2) 0%, rgba(164, 216, 205, 0.15) 100%);
+    border: 3px solid rgba(121, 180, 169, 0.4);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(121, 180, 169, 0.2);
     margin-bottom: 15px;
     transition: all 0.3s ease;
     display: flex;
@@ -272,6 +306,8 @@ strong, b {
 }
 
 .program-item-image:hover .image-frame {
+    border-color: rgba(121, 180, 169, 0.7);
+    box-shadow: 0 12px 30px rgba(121, 180, 169, 0.3);
     transform: scale(1.05);
 }
 
@@ -288,9 +324,9 @@ strong, b {
 }
 
 .program-caption strong {
-    font-size: 1.4rem;
-    color: #2C5D63;
     font-family: 'KZ Balmoral', serif;
+    font-size: 1.8rem;
+    color: #2C5D63;
     text-shadow: 0 0 10px rgba(121, 180, 169, 0.3);
 }
 
@@ -302,38 +338,50 @@ strong, b {
 }
 
 .countdown-item {
+    background: linear-gradient(135deg, rgba(121, 180, 169, 0.25) 0%, rgba(164, 216, 205, 0.2) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(121, 180, 169, 0.4);
     color: #2C5D63;
     padding: 30px 25px;
     border-radius: 15px;
     min-width: 120px;
+    box-shadow: 0 8px 25px rgba(121, 180, 169, 0.2);
 }
 
 .countdown-number {
-    font-size: 3.2rem;
+    font-family: 'KZ Balmoral', serif;
+    font-size: 3.5rem;
     font-weight: bold;
     display: block;
-    font-family: 'KZ Balmoral', serif;
     text-shadow: 0 0 10px rgba(121, 180, 169, 0.3);
 }
 
 .countdown-label {
-    font-size: 1.2rem;
+    font-family: 'KZ Balmoral', serif;
+    font-size: 1.5rem;
     opacity: 0.9;
     letter-spacing: 1px;
     color: #2C5D63;
 }
 
 .location-info {
+    background: linear-gradient(135deg, rgba(121, 180, 169, 0.2) 0%, rgba(164, 216, 205, 0.15) 100%);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(121, 180, 169, 0.4);
     padding: 40px;
+    border-radius: 20px;
     margin: 30px 0;
+    box-shadow: 0 10px 30px rgba(121, 180, 169, 0.2);
 }
 
 .location-info h2 {
-    font-size: 2.8rem;
+    font-family: 'KZ Balmoral', serif;
+    font-size: 3.2rem;
 }
 
 .location-info h3 {
-    font-size: 2.2rem;
+    font-family: 'KZ Balmoral', serif;
+    font-size: 2.5rem;
 }
 
 .location-link {
@@ -343,7 +391,8 @@ strong, b {
     transition: all 0.3s ease;
     display: inline-block;
     margin-top: 15px;
-    font-size: 1.4rem;
+    font-family: 'KZ Balmoral', serif;
+    font-size: 1.8rem;
 }
 
 .location-link:hover {
@@ -354,15 +403,19 @@ strong, b {
 
 /* Календарь Ноября 2025 */
 .calendar-container {
-    font-family: 'Playfair Display', serif !important;
+    background: linear-gradient(135deg, rgba(121, 180, 169, 0.2) 0%, rgba(164, 216, 205, 0.15) 100%);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(121, 180, 169, 0.4);
     padding: 40px;
+    border-radius: 20px;
     margin: 30px auto;
     max-width: 600px;
+    box-shadow: 0 10px 30px rgba(121, 180, 169, 0.2);
 }
 
 .calendar-header {
     font-family: 'Playfair Display', serif;
-    font-size: 2.1rem;
+    font-size: 2.5rem;
     color: #2C5D63;
     margin-bottom: 30px;
     text-shadow: 0 0 10px rgba(121, 180, 169, 0.3);
@@ -380,42 +433,58 @@ strong, b {
     text-align: center;
     color: #2C5D63;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-family: 'Playfair Display', serif;
+    border-bottom: 1px solid rgba(121, 180, 169, 0.4);
 }
 
 .calendar-day {
     padding: 18px;
+    background: rgba(255, 255, 255, 0.6);
     border-radius: 10px;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     transition: all 0.3s ease;
+    border: 1px solid transparent;
     color: #2C5D63;
     font-family: 'Playfair Display', serif;
+}
+
+.calendar-day:hover {
+    background: rgba(121, 180, 169, 0.3);
+    border-color: rgba(121, 180, 169, 0.4);
 }
 
 .calendar-day.event {
     background: linear-gradient(135deg, #79B4A9, #A4D8CD);
     color: white;
     font-weight: bold;
+    box-shadow: 0 0 20px rgba(121, 180, 169, 0.5);
     transform: scale(1.1);
+    border: 2px solid #A4D8CD;
 }
 
 .calendar-day.empty {
     background: transparent;
+    border: none;
 }
 
 /* Форма - ШИРОКАЯ ВЕРСИЯ */
 .form-card {
+    background: linear-gradient(135deg, rgba(121, 180, 169, 0.2) 0%, rgba(164, 216, 205, 0.15) 100%);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(121, 180, 169, 0.4);
     padding: 50px;
+    border-radius: 20px;
     margin: 30px auto;
     width: 95%;
     max-width: 1150px;
+    box-shadow: 0 10px 30px rgba(121, 180, 169, 0.2);
 }
 
 .form-title {
     font-family: 'KZ Balmoral', serif;
-    font-size: 3.2rem;
+    font-size: 3.5rem;
     font-weight: 500;
     font-style: italic;
     color: #2C5D63;
@@ -431,7 +500,7 @@ strong, b {
 .section-label {
     display: block;
     font-family: 'KZ Balmoral', serif;
-    font-size: 1.9rem;
+    font-size: 2.5rem;
     font-weight: 500;
     color: #2C5D63;
     margin-bottom: 15px;
@@ -440,7 +509,7 @@ strong, b {
 
 .section-description {
     font-family: 'KZ Balmoral', serif;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #2C5D63;
     margin-bottom: 25px;
     font-style: italic;
@@ -450,8 +519,9 @@ strong, b {
 .text-input, .number-input {
     width: 100%;
     padding: 20px 25px;
+    border: 2px solid rgba(121, 180, 169, 0.4);
     border-radius: 12px;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-family: 'KZ Balmoral', serif;
     background: rgba(255, 255, 255, 0.8);
     color: #2C5D63;
@@ -460,7 +530,9 @@ strong, b {
 
 .text-input:focus, .number-input:focus {
     outline: none;
+    border-color: rgba(121, 180, 169, 0.7);
     background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(121, 180, 169, 0.3);
 }
 
 .text-input::placeholder {
@@ -478,13 +550,17 @@ strong, b {
     display: flex;
     align-items: center;
     padding: 25px 30px;
+    border: 2px solid rgba(121, 180, 169, 0.4);
     border-radius: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
     background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
 }
 
 .radio-option:hover {
+    border-color: rgba(121, 180, 169, 0.7);
+    background: rgba(255, 255, 255, 0.8);
     transform: translateY(-2px);
 }
 
@@ -522,7 +598,7 @@ strong, b {
 
 .radio-text {
     font-family: 'KZ Balmoral', serif;
-    font-size: 1.7rem;
+    font-size: 2rem;
     color: #2C5D63;
     font-weight: 400;
 }
@@ -530,7 +606,7 @@ strong, b {
 .number-input {
     max-width: 120px;
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     padding: 15px;
 }
 
@@ -542,7 +618,7 @@ strong, b {
 
 .number-label {
     font-family: 'KZ Balmoral', serif;
-    font-size: 1.7rem;
+    font-size: 2rem;
     color: #2C5D63;
     font-weight: 500;
 }
@@ -554,17 +630,20 @@ strong, b {
     border: none;
     border-radius: 12px;
     padding: 25px;
-    font-size: 1.7rem;
+    font-size: 2rem;
     font-family: 'KZ Balmoral', serif;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .submit-btn:hover {
     transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(121, 180, 169, 0.4);
     background: linear-gradient(135deg, #2C5D63, #79B4A9);
 }
 
@@ -576,7 +655,7 @@ strong, b {
 
 .btn-text {
     font-family: 'KZ Balmoral', serif;
-    font-size: 1.7rem;
+    font-size: 2rem;
     font-weight: 500;
 }
 
@@ -586,7 +665,7 @@ strong, b {
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: 'KZ Balmoral', serif;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .message {
@@ -594,9 +673,11 @@ strong, b {
     border-radius: 12px;
     margin-bottom: 30px;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-family: 'KZ Balmoral', serif;
     display: none;
+    backdrop-filter: blur(10px);
+    border: 1px solid;
 }
 
 .message.success {
@@ -626,6 +707,7 @@ strong, b {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    backdrop-filter: blur(10px);
     transition: all 0.3s ease;
 }
 
@@ -673,7 +755,7 @@ strong, b {
 /* Декоративные элементы */
 .floral-decoration {
     position: absolute;
-    font-size: 2.1rem;
+    font-size: 2.5rem;
     color: rgba(121, 180, 169, 0.6);
     z-index: -1;
     animation: gentleFloat 6s ease-in-out infinite;
@@ -681,7 +763,7 @@ strong, b {
 
 .countdown-title {
     font-family: 'KZ Balmoral', serif;
-    font-size: 2.1rem;
+    font-size: 2.8rem;
     color: #2C5D63;
     text-align: center;
     margin-bottom: 25px;
@@ -690,219 +772,40 @@ strong, b {
     width: 100%;
 }
 
-/* УБРАТЬ ВСЕ РАМКИ И ФОНЫ */
-.content, 
-.invitation-combined, 
-.date-box, 
-.location-info, 
-.calendar-container,
-.form-card,
-.image-frame,
-.countdown-item,
-.calendar-day,
-.text-input, 
-.number-input,
-.radio-option,
-.bride-hero-frame {
-    border: none !important;
-    background: transparent !important;
-    backdrop-filter: none !important;
-    box-shadow: none !important;
-}
-
 /* Адаптивность */
 @media (max-width: 768px) {
-    body { font-size: 1rem; }
-    h1 { font-size: 2.4rem; }
-    h2 { font-size: 2rem; }
-    h3 { font-size: 1.7rem; }
-    .bride-name { font-size: 2.4rem !important; }
-    p { font-size: 1.3rem; }
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.5rem; }
+    h3 { font-size: 2rem; }
+    .bride-name { font-size: 3rem !important; }
+    p { font-size: 1.6rem; }
     
-    .program-gallery {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        width: 100%;
-    }
+    .main-title { font-size: 3.5rem; }
+    .main-subtitle { font-size: 2.5rem; }
     
-    .program-image {
-        width: 120px;
-        height: 120px;
-    }
+    .greeting-list { font-size: 1.8rem; }
+    .invitation-message { font-size: 1.6rem; }
     
-    .image-frame {
-        padding: 15px;
-    }
+    .countdown-number { font-size: 2.5rem; }
+    .countdown-label { font-size: 1.3rem; }
     
-    .program-caption strong {
-        font-size: 1.3rem;
-    }
+    .form-title { font-size: 2.8rem; }
+    .section-label { font-size: 2rem; }
+    .section-description { font-size: 1.6rem; }
+    .radio-text { font-size: 1.6rem; }
     
-    .countdown { flex-wrap: wrap; gap: 15px; }
-    .countdown-item { min-width: 80px; padding: 20px 15px; }
-    .countdown-number { font-size: 2.2rem; }
-    .countdown-label { font-size: 1rem; }
-    .audio-control { bottom: 10px; left: 10px; width: 40px; height: 40px; }
-    .calendar-container { padding: 20px; }
-    .calendar-day { padding: 12px; font-size: 1.1rem; }
-    
-    .bride-image-top .bride-image {
-        max-width: 400px;
-        max-height: 80vh;
-    }
-    
-    .nav-dots {
-        right: 10px;
-        gap: 10px;
-    }
-    
-    .dot {
-        width: 10px;
-        height: 10px;
-    }
-    
-    .form-card {
-        padding: 30px 25px;
-        width: 90%;
-    }
-    
-    .form-title {
-        font-size: 2.6rem;
-        margin-bottom: 40px;
-    }
-    
-    .section-label {
-        font-size: 1.6rem;
-    }
-    
-    .section-description {
-        font-size: 1.3rem;
-    }
-    
-    .radio-text {
-        font-size: 1.5rem;
-    }
-    
-    .text-input, .number-input {
-        padding: 18px 20px;
-        font-size: 1.4rem;
-    }
-    
-    .radio-option {
-        padding: 20px 25px;
-    }
-    
-    .submit-btn {
-        padding: 22px;
-        font-size: 1.5rem;
-    }
-    
-    .main-title {
-        font-size: 3rem;
-    }
-    
-    .main-subtitle {
-        font-size: 2.1rem;
-    }
-    
-    .bride-hero-frame {
-        width: 80vmin;
-        height: 80vmin;
-        max-width: 500px;
-        max-height: 500px;
-    }
-    
-    .invitation-combined {
-        padding: 30px;
-    }
-    
-    .greeting-list {
-        font-size: 1.4rem;
-    }
-    
-    .invitation-message {
-        font-size: 1.4rem;
-    }
-    
-    .location-info h2 {
-        font-size: 2.1rem;
-    }
-    
-    .location-info h3 {
-        font-size: 1.7rem;
-    }
-    
-    .countdown-title {
-        font-size: 1.8rem;
-    }
+    .countdown-title { font-size: 2.2rem; }
 }
 
 @media (max-width: 480px) {
-    .program-gallery {
-        gap: 25px;
-    }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.8rem; }
+    p { font-size: 1.4rem; }
     
-    .program-image {
-        width: 100px;
-        height: 100px;
-    }
+    .main-title { font-size: 3rem; }
+    .main-subtitle { font-size: 2rem; }
+    .bride-name { font-size: 2.5rem !important; }
     
-    .image-frame {
-        padding: 12px;
-        border-radius: 15px;
-    }
-    
-    .program-caption strong {
-        font-size: 1.2rem;
-    }
-    
-    .bride-image-top .bride-image {
-        max-width: 300px;
-        max-height: 60vh;
-    }
-    
-    .form-card {
-        padding: 25px 20px;
-        margin: 20px;
-    }
-    
-    .form-title {
-        font-size: 2.2rem;
-    }
-    
-    .radio-option {
-        padding: 18px 20px;
-    }
-    
-    .radio-text {
-        font-size: 1.3rem;
-    }
-    
-    .text-input, .number-input {
-        padding: 15px 18px;
-        font-size: 1.2rem;
-    }
-    
-    .main-title {
-        font-size: 2.5rem;
-    }
-    
-    .main-subtitle {
-        font-size: 1.8rem;
-    }
-    
-    .bride-hero-frame {
-        width: 85vmin;
-        height: 85vmin;
-        max-width: 400px;
-        max-height: 400px;
-    }
-    
-    .invitation-combined {
-        padding: 20px;
-    }
-    
-    .countdown-title {
-        font-size: 1.6rem;
-    }
+    .countdown-title { font-size: 1.8rem; }
 }
