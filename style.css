@@ -265,16 +265,7 @@ strong, b {
 }
 
 /* ТАЙМЕР С ЗАГОЛОВКОМ */
-.countdown {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin: 50px 0;
-    flex-direction: column; /* Заголовок сверху */
-    align-items: center;
-}
-
-.countdown-title {
+#title {
     font-family: 'KZ Balmoral', serif;
     font-size: 3.5rem;
     color: #2C5D63;
@@ -284,11 +275,17 @@ strong, b {
     width: 100%;
 }
 
+.countdown {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
 .countdown-items {
     display: flex;
     justify-content: center;
     gap: 25px;
-    flex-direction: row; /* Таймер горизонтально */
+    flex-direction: row;
 }
 
 .countdown-item {
@@ -313,7 +310,6 @@ strong, b {
     letter-spacing: 1px;
     color: #2C5D63;
 }
-
 .location-info {
     padding: 40px;
     margin: 30px 0;
